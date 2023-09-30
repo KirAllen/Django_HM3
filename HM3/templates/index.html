@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{super() }} - {{ title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Catalog</h1>
+    <div class="menu">
+        <div>
+            <h2>Barbells</h2>
+            <a href = "{{ url_for ('barbells') }}" ><img src="{{ url_for ('static', filename='barbells.png') }}" width=200px height=200px alt="Barbells"></a>
+        </div>
+        <div>
+            <h2>Weights</h2>
+            <a href = "{{ url_for ('weights') }}" ><img src="{{ url_for ('static', filename='weight.png') }}" width=200px height=150px alt="weights"></a>
+        </div>
+        <div>
+            <h2>Dumbbells</h2>
+            <a href = "{{ url_for ('dumbbells') }}" ><img src="{{ url_for ('static', filename='dumbbells.png') }}" width=200px height=200px alt="weights"></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
